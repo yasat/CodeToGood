@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question</title>
+    <style>
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="overlay">
+        <div id="question">
+            <p>What is the answer? option 2 is always right!!</p>
+        </div>
+        <div id="options">
+            <button id="option1">Option 1</button>
+            <button id="option2">Option 2</button>
+        </div>
+    </div>
+
+    <script>
+        const overlay = document.getElementById("overlay");
+
+
+        const option1 = document.getElementById("option1");
+        const option2 = document.getElementById("option2");
+        
+        option1.addEventListener("click", () => {
+            window.location.href = 'game_over.html';
+        });
+
+        option2.addEventListener("click", () => {
+            window.location.href = 'run_story.php';
+        });
+
+    </script>
+
+</body>
+</html>

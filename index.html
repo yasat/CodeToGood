@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Animated GIF</title>
+    <style>
+        #start-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Style the start button */
+        #start-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="start-page">
+        <h1>Reach Home</h1>
+        <button id="start-button">Create own story!</button>
+    </div>
+
+    <script>
+        const startButton = document.getElementById("start-button");
+    
+        startButton.addEventListener("click", () => {
+            window.location.href = 'charecter_selection.php';
+        });
+    </script>
+</body>
+
+</html>

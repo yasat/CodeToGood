@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story</title>
+    <style>
+        #background_canvas{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("places/empty_field.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background_canvas">
+        <img id="character" src="charecters/penguin/penguin_running.gif">
+    </div>
+
+    <script>
+
+        const queryParams = new URLSearchParams(window.location.search);
+
+        const place = queryParams.get("place");
+        const action = queryParams.get("action");
+
+        console.log(place, action);
+
+        const character = document.getElementById("character");
+        const background_canvas = document.getElementById("background_canvas");
+
+        background_canvas.style.backgroundImage = "url('"+place+"')";
+        character.setAttribute("src", action);
+
+        character.style.position = "absolute";
+        character.style.width = "200px";
+        character.style.height = "200px";
+        character.style.left = "600px";
+        character.style.top = "550px";
+        
+        let characterX = 50;
+        const characterSpeed = 3;
+        
+        function updateCharacterPositionTtoB() {
+            characterX += characterSpeed;
+            character.style.top = characterX + "px";
+            
+            if (characterX > window.innerHeight- 250) {
+                window.location.href = 'question.html';
+                return;
+            }
+            
+            requestAnimationFrame(updateCharacterPositionTtoB);
+        }
+
+        function updateCharacterPositionLtoR() {
+            characterX += characterSpeed;
+            character.style.left = characterX + "px";
+            
+            if (characterX > window.innerWidth- 500) {
+                window.location.href = 'question.html';
+                return;
+            }
+            
+            requestAnimationFrame(updateCharacterPositionLtoR);
+        }
+
+        if (action.includes("falling")) {
+            updateCharacterPositionTtoB();
+        } else {
+            updateCharacterPositionLtoR();
+        }
+
+    </script>
+</body>
+
+</html>
