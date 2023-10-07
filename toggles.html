@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggles</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .custom-control-label::before,
+        .custom-control-label::after {
+            width: 2.5rem;
+            height: 1.5rem;
+        }
+
+        .custom-control-label::before {
+            top: 0;
+            left: 0;
+        }
+
+        .custom-control-label::after {
+            left: 1.5rem;
+        }
+
+        .custom-switch .custom-control-label::before,
+        .custom-switch .custom-control-label::after {
+            border-radius: 1.5rem;
+        }
+
+        .custom-switch .custom-control-label::before {
+            background-color: #ccc;
+        }
+
+        .custom-switch .custom-control-label::after {
+            background-color: #007bff;
+        }
+
+        .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+            background-color: #28a745;
+        }
+
+        #header {
+            color: white;
+            width: 100%;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        #setTogglesDiv {
+            width: 100%;
+            text-align: center;
+        }
+
+        body{
+            background-image: url('background.png');
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="header">Toggles</h1>
+        <div class="container mt-4">
+            <form method="get" action="story.html">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Audio Vibration Support
+                                <div class="custom-control custom-switch float-right">
+                                    <input type="checkbox" class="custom-control-input" name="audio_dis" id="audio_dis" value="1">
+                                    <label class="custom-control-label" for="audio_dis"></label>
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Eye Tracking
+                                <div class="custom-control custom-switch float-right">
+                                    <input type="checkbox" class="custom-control-input" name="audio_dis" id="eye_tracking_dis" value="1">
+                                    <label class="custom-control-label" for="eye_tracking_dis"></label>
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Visual Color 1
+                                <div class="custom-control custom-switch float-right">
+                                    <input type="checkbox" class="custom-control-input" name="visual_1_dis" id="visual_1_dis" value="1">
+                                    <label class="custom-control-label" for="visual_1_dis"></label>
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Visual Color 2
+                                <div class="custom-control custom-switch float-right">
+                                    <input type="checkbox" class="custom-control-input" name="visual_2_dis" id="visual_2_dis" value="1">
+                                    <label class="custom-control-label" for="visual_2_dis"></label>
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="setTogglesDiv">
+                <input class="btn btn-primary" type="submit" value="set toggles" name="setToggles" id="setToggles">
+            </div>
+        </form>
+        </div>
+       
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

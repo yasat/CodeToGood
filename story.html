@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <iframe src="https://scratch.mit.edu/projects/868123000/embed" allowtransparency="true" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- accessibility -->
+    <script>
+        const queryParams = new URLSearchParams(window.location.search);
+        const audio_dis = queryParams.get("audio_dis");
+        const eye_tracking_dis = queryParams.get("eye_tracking_dis");
+        const visual_1_dis = queryParams.get("visual_1_dis");
+        const visual_2_dis = queryParams.get("visual_2_dis");
+
+        console.log(audio_dis+""+eye_tracking_dis+""+visual_1_dis+""+visual_2_dis);
+    </script>
+     <!-- accessibility -->
+     
+</body>
+</html>
+
